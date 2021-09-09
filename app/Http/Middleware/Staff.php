@@ -17,19 +17,19 @@ class Staff
      */
     public function handle(Request $request, Closure $next)
     {
-        if (in_array(request()->getPathInfo(), [
+        if (in_array(request()->getUri(), [
             route(
-                'reg',
+                'register',
                 ['role' => 'admin']
             ),
             route(
-                'reg',
+                'register',
                 ['role' => 'staff']
             ), route('login')
         ])) {
             return $next($request);
         }
-        
+
         if (auth('sanctum')->user() == null) {
             return response(['message' => 'Unauthenticated'], 401);
         }

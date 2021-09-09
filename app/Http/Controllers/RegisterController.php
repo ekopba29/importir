@@ -68,10 +68,12 @@ class RegisterController extends Controller
         $credentials = request(['email', 'password']);
         if (!Auth::attempt($credentials)) {
             return response()->json([
-                'message' => 'The given data was invalid.',
+                'status' => 'NOK',
                 'errors' => [
-                    'password' => [
-                        'Invalid credentials'
+                    'validation' => [
+                        'password' => [
+                            'Invalid credentials'
+                        ]
                     ],
                 ]
             ], 422);
@@ -81,7 +83,10 @@ class RegisterController extends Controller
         $authToken = $user->createToken('auth-token')->plainTextToken;
 
         return response()->json([
-            'access_token' => $authToken,
+            'status' => 'OK',
+            'data' => [
+                'access_token' => $authToken,
+            ]
         ]);
     }
 }

@@ -47,5 +47,5 @@ Route::prefix('v1')->group(function () {
     });
 });
 
-Route::post('register/{role}', [RegisterController::class, 'register'])->name('reg');
+Route::post('register/{role}', [RegisterController::class, 'register'])->name('register');
 Route::post('login', [RegisterController::class, 'login'])->name('login');

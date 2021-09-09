@@ -17,6 +17,19 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
+        if (in_array(request()->getPathInfo(), [
+            route(
+                'reg',
+                ['role' => 'admin']
+            ),
+            route(
+                'reg',
+                ['role' => 'staff']
+            ), route('login')
+        ])) {
+            return $next($request);
+        }
+        
         if (auth('sanctum')->user() == null) {
             return response(['message' => 'Unauthenticated'], 401);
         }

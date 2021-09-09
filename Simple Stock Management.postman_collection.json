@@ -1,0 +1,1167 @@
+{
+	"info": {
+		"_postman_id": "2509e9af-12cc-4d11-a996-b031458d68e2",
+		"name": "Simple Stock Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categorie",
+			"item": [
+				{
+					"name": "categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url_v1}}categories",
+							"host": [
+								"{{base_url_v1}}categories"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "categorie",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url_v1}}categories/1",
+							"host": [
+								"{{base_url_v1}}categories"
+							],
+							"path": [
+								"1"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "categorie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Name333",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}categories",
+							"host": [
+								"{{base_url_v1}}categories"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "categorie",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Edit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}categories/1",
+							"host": [
+								"{{base_url_v1}}categories"
+							],
+							"path": [
+								"1"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "categorie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Edite",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PATCH",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}categories/2",
+							"host": [
+								"{{base_url_v1}}categories"
+							],
+							"path": [
+								"2"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url_v1}}products/",
+							"host": [
+								"{{base_url_v1}}products"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url_v1}}products/2",
+							"host": [
+								"{{base_url_v1}}products"
+							],
+							"path": [
+								"2"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Newde4343deeeed",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "Kilo",
+									"type": "text"
+								},
+								{
+									"key": "categorie[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categorie[]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}products",
+							"host": [
+								"{{base_url_v1}}products"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Neweddds",
+									"type": "text"
+								},
+								{
+									"key": "unit",
+									"value": "Kilos",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "44",
+									"type": "text"
+								},
+								{
+									"key": "categorie[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categorie[]",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}products/13",
+							"host": [
+								"{{base_url_v1}}products"
+							],
+							"path": [
+								"13"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				},
+				{
+					"name": "product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Edite",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PATCH",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}products/1",
+							"host": [
+								"{{base_url_v1}}products"
+							],
+							"path": [
+								"1"
+							]
+						},
+						"description": "get categories data"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "come",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "unit_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "date_come",
+									"value": "2021-12-12 12:12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}comes",
+							"host": [
+								"{{base_url_v1}}comes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "come",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "unit_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "date_come",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}comes/2",
+							"host": [
+								"{{base_url_v1}}comes"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "come",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "unit_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "date_come",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}comes/1",
+							"host": [
+								"{{base_url_v1}}comes"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "come_out",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "unit_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "date_come",
+									"value": "2021-12-12 12:12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}comes",
+							"host": [
+								"{{base_url_v1}}comes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "come_out",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "unit_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "date_come",
+									"value": "2021-12-12 12:12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}come_outs/4",
+							"host": [
+								"{{base_url_v1}}come_outs"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "come_out",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "total",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "unit_price",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "date_come",
+									"value": "2021-12-12 12:12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url_v1}}come_outs/1",
+							"host": [
+								"{{base_url_v1}}come_outs"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "StockIn",
+					"item": [
+						{
+							"name": "daily",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "14|YeJSYI8RLdHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}come_reports/daily?date=2021-09-08",
+									"host": [
+										"{{base_url_v1}}come_reports"
+									],
+									"path": [
+										"daily"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2021-09-08"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "weekly",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}come_reports/weekly?date=2021-09-08",
+									"host": [
+										"{{base_url_v1}}come_reports"
+									],
+									"path": [
+										"weekly"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2021-09-08"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "monthly",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}come_reports/monthly?month=09&year=2021",
+									"host": [
+										"{{base_url_v1}}come_reports"
+									],
+									"path": [
+										"monthly"
+									],
+									"query": [
+										{
+											"key": "month",
+											"value": "09"
+										},
+										{
+											"key": "year",
+											"value": "2021"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "yearly",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}come_reports/yearly?year=2021",
+									"host": [
+										"{{base_url_v1}}come_reports"
+									],
+									"path": [
+										"yearly"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2021"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "StockOut",
+					"item": [
+						{
+							"name": "daily",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}out_reports/daily?date=2021-12-12",
+									"host": [
+										"{{base_url_v1}}out_reports"
+									],
+									"path": [
+										"daily"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2021-12-12"
+										},
+										{
+											"key": null,
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "weekly",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "14|YeJSYI8RLHfi7MnZM3crwy5v5RbNPFUbwCqN8QSt",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}come_reports/weekly?date=2021-09-08",
+									"host": [
+										"{{base_url_v1}}come_reports"
+									],
+									"path": [
+										"weekly"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2021-09-08"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "monthly",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}out_reports/monthly?month=12&year=2021",
+									"host": [
+										"{{base_url_v1}}out_reports"
+									],
+									"path": [
+										"monthly"
+									],
+									"query": [
+										{
+											"key": "month",
+											"value": "12"
+										},
+										{
+											"key": "year",
+											"value": "2021"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "yearly",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "13|hqCom93AkjfoslfYA1Ge8MuNPSJHPIgbnSh0vQid",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url_v1}}out_reports/yearly?year=2021",
+									"host": [
+										"{{base_url_v1}}out_reports"
+									],
+									"path": [
+										"yearly"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2021"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}register/admin",
+							"host": [
+								"{{base}}register"
+							],
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Staff",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "staff@staff.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://manage_stock.test/api/register/staff",
+							"protocol": "http",
+							"host": [
+								"manage_stock",
+								"test"
+							],
+							"path": [
+								"api",
+								"register",
+								"staff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "staff@staff.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}login",
+							"host": [
+								"{{base}}login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url_v1",
+			"value": "http://importir.test/api/v1/"
+		},
+		{
+			"key": "base",
+			"value": "http://importir.test/api/"
+		}
+	]
+}

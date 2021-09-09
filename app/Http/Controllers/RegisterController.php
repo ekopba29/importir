@@ -60,10 +60,22 @@ class RegisterController extends Controller
 
     public function login(Request $request)
     {
-        $request->validate([
-            'email' => 'email|required',
-            'password' => 'required'
-        ]);
+        $rule = [
+            'email' => 'required|email',
+            'password' => 'required|min:6'
+        ];
+
+        $validation = Validator::make(
+            $request->all(),
+            $rule
+        );
+
+        if ($validation->fails()) {
+            return response()->json([
+                'status' => 'NOK',
+                'errors' => ['validation' => $validation->errors()]
+            ]);
+        }
 
         $credentials = request(['email', 'password']);
         if (!Auth::attempt($credentials)) {
